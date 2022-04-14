@@ -1,0 +1,19 @@
+{
+  "name": "quotes-book",
+  "version": "1.0.0",
+  "description": "This is a web-based social network where you may post, modify, and remove Quotes. Quotes will be available to everyone, whoever uses the platform. The post’s date and time will be stamped, and a unique hash value will be generated for it. No one else has the authority to change or remove a quote provided by another user.",
+  "main": "app.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souloper/QuotesBook.git"
+  },
+  "author": "Soumya Das",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/souloper/QuotesBook/issues"
+  },
+  "homepage": "https://github.com/souloper/QuotesBook#readme"
+}
