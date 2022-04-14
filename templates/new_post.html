@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Posts</title>
+{% endblock %}
+
+
+
+{% block body %}
+
+<h1 style="margin-top: 3rem;">Create New Quote:</h1>
+<!-- <hr> -->
+<h2>New Post:</h2>
+<form class="row g-3" action="/posts" method="POST">
+
+    <div class="col-sm-9">
+        <label class="form-label">Title:</label><br>
+        <input class="form-control" type="text" name="title" id="title" placeholder="Write your Quote Title...">
+    </div>
+
+    <div class="col-sm">
+        <label class="form-label">Author:</label><br>
+        <input class="form-control" type="text" name="author" id="author" placeholder="Mention Author's name here!">
+    </div>
+    
+    <div class="col-sm-12">
+        <label class="form-label">Posts:</label><br>
+        <textarea class="form-control" name="content" id="content" rows="4" placeholder="Start writing your Quote or content"></textarea>
+    </div>
+
+    <div style="margin-top: 3rem;">
+        <input class="btn btn-success col-sm-12 shadow-lg mb-5 rounded" type="submit" value="POST">
+    </div>
+</form>
+
+
+
+{% endblock %}
