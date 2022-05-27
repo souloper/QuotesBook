@@ -66,6 +66,11 @@ all_posts = [{
 def index():
     return render_template('index.html')
 
+@app.route('/codes', methods=['GET', 'POST'])
+def codes():
+    #all_posts = BlogPost.query.order_by(BlogPost.date_posted).all()
+    return render_template('codes.html', posts=all_posts)
+
 @app.route('/posts', methods=['GET', 'POST'])
 def posts():
 
@@ -125,4 +130,4 @@ def new_post():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

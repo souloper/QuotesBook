@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Posts</title>
+{% endblock %}
+
+
+{% block body %}
+<!-- <h1>All Quotes</h1> -->
+
+
+<div class="post_headingBtn">
+    <h2 class="post_heading" style="display: inline;">ALL Quotes<sub>by</sub> Hoomans!! </h2>
+    <a style="display: inline;" class="btn btn-outline-info float-end" href="/posts/new"><i class="bi bi-pen"></i> Quote</a>
+</div>
+
+
+
+<!-- <form class="row g-3" action="/posts" method="POST">
+    <div class="col-sm-9">
+        <label class="form-label">Title:</label><br>
+        <input class="form-control" type="text" name="title" id="title" placeholder="Write your Quote Title...">
+    </div>
+    
+    <div class="col-sm">
+        <label class="form-label">Author:</label><br>
+        <input class="form-control" type="text" name="author" id="author" placeholder="Mention Author's name here!">
+    </div>
+    
+    <div class="col-sm-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Posts:</label>
+        <textarea class="form-control" type="text" name="content" id="content" rows="2" placeholder="Start writing your Quote or content"></textarea>
+    </div>
+
+    <div>
+        <input class="btn btn-outline-warning" type="submit" value="Post">
+    </div>
+</form>-->
+<hr > 
+
+
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+
+        {% if post.author %}
+            <small>Written By: <b><i>{{ post.author }}</i></b> on {{ post.date_posted }}</small>
+        {% else %}
+            <small>By: N/A</small>
+        {% endif %}
+
+
+        <p style="white-space: pre-wrap;">{{ post.content }}</p>
+        <!-- <a class="btn btn-outline-danger btn-sm" href="/posts/delete/{{post.id}}">Delete</a>
+        <a class="btn btn-primary btn-sm" href="/posts/edit/{{post.id}}">Edit</a> -->
+    {% endfor %}
+
+{% endblock %}
