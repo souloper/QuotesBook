@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../static/images/chat-square-quote.svg" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+
+    <!--Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-chat-square-quote"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+              />
+              <path
+                d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"
+              />
+            </svg>
+            <h1 class="fs-4" id="title" href="/">QuotesBook</h1>
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+            id="title_elements"
+          >
+            <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="/posts" class="nav-link px-2 text-white">Posts</a></li>
+            <li>
+              <a href="/posts/new" class="nav-link px-2 text-white"
+                >Write Quote</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/souloper"
+                class="nav-link px-2 text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link px-2 text-white"
+                href="mailto: [get.soumya2000@gmail.com]?subject=WriteSubject&body=BodyOfLetter"
+                ><img
+                  width="20"
+                  alt="Email Me"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/32px-Gmail_icon_%282020%29.svg.png"
+              /></a>
+            </li>
+            <li>
+              <a
+                class="nav-link px-2 bi bi-linkedin icon_color"
+                href="https://www.linkedin.com/in/getsoumya/"
+              ></a>
+            </li>
+          </ul>
+
+          <div class="text-end">
+            <a href="https://www.buymeacoffee.com/getsoumya" target="_blank"
+              ><img
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                alt="Buy Me A Coffee"
+                style="height: 60px !important; width: 217px !important"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="container">
+      <script
+        data-name="BMC-Widget"
+        data-cfasync="false"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="getsoumya"
+        data-description="Support me on Buy me a coffee!"
+        data-message="Thanks for supporting me. Hope you have a wonderful day"
+        data-color="#FFDD00"
+        data-position="Right"
+        data-x_margin="18"
+        data-y_margin="18"
+      ></script>
+      {% block body %}{% endblock %}
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light" id="footer">
+      <div class="container">
+        <span class="text-muted">Developed with &#128150; by <a href="https://github.com/souloper" style="text-decoration: none;">Soumya</a></span>
+      </div>
+    </footer>
+
+    <!--Bootstrap Js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

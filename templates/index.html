@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>QuotesBook</title>
+{% endblock %}
+
+
+
+{% block body %}
+<!-- <div class="container">
+    <h1>Home Page</h1> -->
+
+    
+    <!-- <table>
+        
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+
+
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+                <a href="">Delete</a>
+                <br>
+                <a href="">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+        <form action="/" method="POST"></form>
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task"> -->
+<!-- </div> -->
+
+
+<main style="width: 100%;">
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-6 p-lg mx-auto my-4">
+      <h3 class="display-6 fw-normal">Welcome to</h3>
+      <h1 class="display-2 fw-normal" style="font-family: 'Samarkan', sans-serif;">QuotesBook</h1>
+      <p class="lead fw-normal">Quotes can be posted, modified, and removed on this social network. Quotes will be accessible to anybody who uses the platform. The date and time of the post will be stamped, and a unique hash value will be generated. And your IP addresses and locations are being recorded. Please use it with caution and do not use it for anything other than quotes. I hope you're all that smart to grasp it. Thank you very much.</p>
+      <a class="btn btn-outline-secondary" href="/posts">Write</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+
+</main>
+{% endblock %}
